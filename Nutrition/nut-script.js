@@ -1,5 +1,7 @@
+var fetchButton = document.getElementById('fetch-button');
+
 function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
+    // fetch request gets a list of all 
     var requestUrl = 'https://api.spoonacular.com/recipes/autocomplete?number=10&query=chick';
   
     fetch(requestUrl)
