@@ -1,0 +1,14 @@
+.header {
+    background-color: #bbe8d9;
+    height:90px;
+}
+
+.nav {
+    background-color: #feedaa;
+    color: black;
+}
+
+.container {
+    margin-left: 0;
+    font-size: 18px;
+}
