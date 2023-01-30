@@ -1,0 +1,14 @@
+.header {
+    background-color: rgb(139, 246, 246);
+    height:90px;
+}
+
+.nav {
+    background-color: rgb(249, 249, 133);
+    color: black;
+}
+
+.container {
+    margin-left: 0;
+    font-size: 18px;
+}
