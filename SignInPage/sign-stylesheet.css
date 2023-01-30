@@ -1,9 +1,17 @@
-.header {
-    background-color: rgb(126, 246, 246);
-    height:90px;
+/* Main site title */
+.main {
+    font-size: 123px;
+    text-shadow: 3px 2px 2px #ef7c8e;
 }
 
+/* header */
+.header {
+    background-color: #bbe8d9;
+    height: 90px;
+}
+
+/* Navbar */
 .bar {
-    background-color: rgb(249, 249, 109);
+    background-color: #feedaa;
     color: black;
 }
