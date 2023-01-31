@@ -38,11 +38,27 @@
     <!-- Columns via bootstrap add border" -->
     <div class="container">
         <div class="row align-items-start">
-            <div class="col-3 p-3 mb-2"> <!--still needs to be resized and api added-->
+            <div class="col-3 p-3 mb-2"> <!-- the column in which holds the weather API -->
                 Side bar will be here. Add Weather API and upcoming event info?
+                <!-- card that holds the api within the sidebar -->
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
             </div>
 
             <div class="col-sm-9 p-3"> <!--Add sticky note code here in this div-->
+
+                <button type="button" class="btn btn-outline-secondary"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 18rem;">
+                    Add new Note
+                </button>
                 Sticky Notes will go here
             </div>
         </div>
