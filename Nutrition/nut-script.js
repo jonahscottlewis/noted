@@ -2,7 +2,9 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
     // fetch request gets a list of all 
-    var requestUrl = 'https://api.spoonacular.com/recipes/autocomplete?number=10&query=chick';
+
+    var userSearch = document.getElementById('userSearch').value;
+    var requestUrl = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=f77fd2f488d240c483a26996e70388ac&number=10&query='+userSearch+'&instructionsRequired=true&addRecipeInformation=true';
   
     fetch(requestUrl)
       .then(function (response) {
