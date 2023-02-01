@@ -1,25 +1,46 @@
+/* Header styling */
 .header {
     background-color: #bbe8d9;
     height:90px;
 }
 
+/* Main title in header styling */
 .main {
         font-size: 123px;
         text-shadow: 3px 2px 2px #ef7c8e;
 }
 
+/* navbar */
 .nav {
     background-color: #feedaa;
     color: black;
 }
 
+/* Container that holds sidebar and stickynotes section */
 .container {
     margin-left: 0;
     font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+/* sticky notes */
+/* .stickynotes {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+} */
+
+/* modal */
 .note {
-    background-image: url("./stickynotelarge.png");
+    background-image: url("./notelanding.png");
     width:275px;
     height:275px;
+    display:flex;
+   justify-content: center;
+}
+
+/*  add note button on stickynotes */
+.addnote {
+    margin:auto;
 }
