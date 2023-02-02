@@ -24,6 +24,21 @@
     justify-content: space-evenly;
 }
 
+/* Weather sidebar */
+.weatherCard {
+    width: 288px;
+    height: 550px;
+    border: 2px solid darkgrey;
+    box-shadow: 3px 2px 2px lightgrey;
+}
+
+/* see weather button */
+.seeWeather {
+    display: flex;
+    justify-content: center;
+
+}
+
 /* sticky notes */
 /* .stickynotes {
     display:flex;
