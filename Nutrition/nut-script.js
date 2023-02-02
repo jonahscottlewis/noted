@@ -31,7 +31,7 @@ function getApi() {
           //tableData.appendChild(link);
           //createTableRow.appendChild(tableData);
           //tableBody.appendChild(createTableRow);
-       */ }
+        }
       ); 
   };
 
