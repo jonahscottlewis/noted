@@ -2,7 +2,8 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
   // fetch request gets a list of all 
-  var requestlatlongUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip=95991&appid=301abb42e89fddd7a250ac02d53fe894';
+  var weatherInput = document.querySelector('.weatherInput').value
+  var requestlatlongUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip=' + weatherInput + '&appid=301abb42e89fddd7a250ac02d53fe894';
 
   fetch(requestlatlongUrl)
     .then(function (response) {
@@ -20,6 +21,21 @@ function getApi() {
         })
         .then(function (data) {
           console.log(data)
+          // Puts current temperature into weather sidebar
+          var temperatureElement = document.getElementById('temp')
+          temperatureElement.innerHTML = data.main.temp + 'F';
+          // Puts max temperature into weather sidebar
+          var maxtemperatureElement = document.getElementById('maxtemp')
+          maxtemperatureElement.innerHTML = data.main.temp_max + 'F';
+          // Puts min temperature into weather sidebar
+          var mintemperatureElement = document.getElementById('mintemp')
+          mintemperatureElement.innerHTML = data.main.temp_min + 'F';
+          // Puts humidity into weather sidebar
+          var humidityElement = document.getElementById('humidity')
+          humidityElement.innerHTML = data.main.humidity + '%';
+          // Puts wind speed into weather sidebar
+          var windspeedElement = document.getElementById('windspeed')
+          windspeedElement.innerHTML = data.wind.speed + 'mph';
         })
     });
 };

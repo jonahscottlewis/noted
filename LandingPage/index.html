@@ -46,10 +46,16 @@
                     <div class="card-body">
                         <h5 class="card-title">Today's Weather</h5>
                         <input class="weatherInput" type="text" placeholder="Enter zip code here.."></input>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <button type="button" class="btn btn-outline-secondary seeWeather" id="fetchButton"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 5rem; height: 3rem;">
+                        <!-- Temperature -->
+                      <h3>Current Temperature</h3>
+                      <p class= "weatherResults" id="temp"></p>
+                      <h2>Max-Temperature:</h2><p class= "weatherResults" id="maxtemp"></p>
+                      <h2>Min-Temperature:</h2><p class= "weatherResults" id="mintemp"></p>
+                      <h3>Humidity</h3><p class= "weatherResults" id="humidity"></p>
+                      <h3>Wind</h3>
+                      <h2>Speed:</h2><p class= "weatherResults" id="windspeed"></p>
+                        <button type="button" class="btn btn-outline-secondary seeWeather" id="fetch-button"
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 10rem; height: 2rem;">
                             See Today's Weather
                         </button>
                     </div>

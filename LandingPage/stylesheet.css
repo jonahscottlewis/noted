@@ -27,24 +27,44 @@
 /* Weather sidebar */
 .weatherCard {
     width: 288px;
-    height: 550px;
+    height: 600px;
     border: 2px solid darkgrey;
     box-shadow: 3px 2px 2px lightgrey;
 }
 
-/* see weather button */
-.seeWeather {
-    display: flex;
-    justify-content: center;
+/* content within the weather sidebar */
+.card-body {
+    text-align: center;
 
 }
 
-/* sticky notes */
-/* .stickynotes {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-} */
+/* card title */
+h5 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #ef7c8e;
+}
+
+/* textbox for zip code */
+.weatherInput {
+    margin: 3px 3px 3px 3px;
+}
+
+/* titles for each section */
+h3 {
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+/* sub-titles */
+h2 {
+    font-size: 18px;
+}
+
+/* weather results from API */
+.weatherResults {
+    font-size: 18px;
+}
 
 /* modal */
 .note {
