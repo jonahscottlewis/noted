@@ -31,3 +31,18 @@ function getApi() {
   };
 
   fetchButton.addEventListener('click', getApi);
+
+
+
+
+
+
+
+
+  // -------------------------------modal----------------------------------
+  var myModal = document.getElementById('fetch-button');
+
+  addnote.addEventListener('click', myModal);
+ 
+ 
+  $('#myModal').modal(options)
