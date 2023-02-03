@@ -27,28 +27,32 @@
   </div>
   <div class="container text-center">
     <div class="row">
-      <div class="col">
+      <div class="col" id="mealPlan">
         <div class="card">
-          <h4>Meal plan</h4>
-          1 of 3
+      <h4>Meal plan</h4>
+          <input id="addRecipe" type="text" placeholder="+ your recipe URL here"></input>
+          <button class="btn btn-danger" id="add">Add</button>
+          <br>
+          <ul id="savedList"></ul>
         </div>
       </div>
 
       <div class="col-6">
-        <div class="card">
-          <h4>Recipes</h4>
-          
-          <input id="userSearch" type="search" placeholder="Search Recipe"></input>
-          <button class="btn btn-danger" id="fetch-button">Search</button>
-          <div class="results"></div>
+        <div class="card recipeUrl" id="recipe">
+         
+              <h4>Recipes</h4>
+              
+              <input id="userSearch" type="search" placeholder="Search Recipe"></input>
+              <button class="btn btn-danger" id="fetch-button">Search</button>
+              <div class="results"></div>
         </div>
       </div>
 
-   <div class="col">
+<!--  <div class="col">
         <div class="card">
           <h4>Notes</h4>
           3 of 3
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
