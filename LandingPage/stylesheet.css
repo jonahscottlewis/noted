@@ -21,8 +21,21 @@
     margin-left: 0;
     font-size: 18px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:left;
 }
+
+.row {
+    display:flex;
+    flex: 1;
+   
+}
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 
 /* Weather sidebar */
 .weatherCard {
@@ -50,7 +63,7 @@ h5 {
     margin: 3px 3px 3px 3px;
 }
 
-/* titles for each section */
+/* titles for each section (weather) */
 h3 {
     font-size: 22px;
     text-decoration: underline;
@@ -66,16 +79,20 @@ h2 {
     font-size: 18px;
 }
 
-/* modal */
-.note {
+/* sticky notes */
+.addNote {
     background-image: url("./notelanding.png");
-    width:275px;
-    height:275px;
-    display:flex;
-   justify-content: center;
+    padding: 3rem;
 }
 
-/*  add note button on stickynotes */
-.addnote {
-    margin:auto;
+/* Modal Styling */
+/* modal Title */
+h1 {
+    font-size: 20px;
+}
+
+/* text box for input */
+.notebody {
+    width: 470px;
+    height: 275px;
 }
