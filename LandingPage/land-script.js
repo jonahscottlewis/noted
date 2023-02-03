@@ -39,7 +39,7 @@ function getApi() {
         })
     });
 };
-
+// event listener for clicking the fetchButton to respond to click to get API
 fetchButton.addEventListener('click', getApi);
 
 
