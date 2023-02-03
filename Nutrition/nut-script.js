@@ -6,6 +6,7 @@ function getApi() {
   var requestUrl = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=f77fd2f488d240c483a26996e70388ac&number=10&query=' + userSearch + '&instructionsRequired=true&addRecipeInformation=true';
   var urlResults = [];
 
+  //
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -13,20 +14,19 @@ function getApi() {
     .then(function (data) {
       console.log(data)
       for (var i = 0; i < 10; i++) {
-        var sourceUrl = data.results[i].sourceUrl
-        var createHeader = document.createElement('a');
-        createHeader.setAttribute('href', sourceUrl);
-        createHeader.setAttribute('target', '_blank')
-        createHeader.innerHTML = sourceUrl;
-        document.body.appendChild(createHeader);
+        var sourceUrl = data.results[i].sourceUrl;
+        var recipeTitle = document.createElement('p');
+        var recipeLink = document.createElement('a');
+        recipeLink.setAttribute('href', sourceUrl);
+        recipeLink.setAttribute('target', '_blank');
+        recipeTitle.innerHTML = data.results.title;
+        recipeLink.innerHTML = sourceUrl;
+        document.body.appendChild(recipeLink);
       }
 
-      // Setting the text of link and the href of the link
-      link.textContent = data[i].html_url;
-      link.href = data[i].html_url;
-
-
       urlResults.push(sourceUrl);
+      sourceUrl.push(recipeTitle);
+      
     }
     );
 };
