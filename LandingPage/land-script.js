@@ -43,16 +43,31 @@ function getApi() {
 fetchButton.addEventListener('click', getApi);
 
 
+// add sticky notes
+
+var fetchButton = document.getElementById('addNote');
+
+function  add(stickyNotes) {}
+var stickyNotes = document.createElement('ul')
+
+fetchButton.addEventListener('click', stickyNotes);
+
+const myModal = new bootstrap.Modal('#myModal', {
+  keyboard: false
+})
 
 
+var stickyNotesDiv = document.getElementById("stickyNotes");
+var saveNoteBtn = document.getElementById("saveNote");
+var noteBodyInput = document.getElementById("noteBody");
+saveNoteBtn.addEventListener("click", function() {
+  var noteText = noteBodyInput.value;
+  var newNote = document.createElement("div");
+  newNote.classList.add("addNote");
+  newNote.style = "width: 275px; height: 275px";
+  newNote.textContent = noteText;
+  stickyNotesDiv.appendChild(newNote);
+  myModal.hide();
+  noteBodyInput.value = "";
+});
 
-
-
-
-// -------------------------------modal----------------------------------
-var myModal = document.getElementById('fetch-button');
-
-addnote.addEventListener('click', myModal);
-
-
-$('#myModal').modal(options)

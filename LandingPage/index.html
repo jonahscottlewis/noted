@@ -38,22 +38,26 @@
     </div>
     <!-- Columns via bootstrap add border" -->
     <div class="container">
-        <div class="row align-items-start">
+        <div class="row align-items-start ">
             <!-- the column in which holds the weather API -->
-            <div class="col-3 p-3 mb-2"> 
+            <div class="col-3 p-3 mb-2 column">
                 <!-- card that holds the api within the sidebar -->
-               <div class="card weatherCard">  <!-- style="width: 18rem; height: 24rem;" -->
+                <div class="card weatherCard">
                     <div class="card-body">
                         <h5 class="card-title">Today's Weather</h5>
                         <input class="weatherInput" type="text" placeholder="Enter zip code here.."></input>
                         <!-- Temperature -->
-                      <h3>Current Temperature</h3>
-                      <p class= "weatherResults" id="temp"></p>
-                      <h2>Max-Temperature:</h2><p class= "weatherResults" id="maxtemp"></p>
-                      <h2>Min-Temperature:</h2><p class= "weatherResults" id="mintemp"></p>
-                      <h3>Humidity</h3><p class= "weatherResults" id="humidity"></p>
-                      <h3>Wind</h3>
-                      <h2>Speed:</h2><p class= "weatherResults" id="windspeed"></p>
+                        <h3>Current Temperature</h3>
+                        <p class="weatherResults" id="temp"></p>
+                        <h2>Max-Temperature:</h2>
+                        <p class="weatherResults" id="maxtemp"></p>
+                        <h2>Min-Temperature:</h2>
+                        <p class="weatherResults" id="mintemp"></p>
+                        <h3>Humidity</h3>
+                        <p class="weatherResults" id="humidity"></p>
+                        <h3>Wind</h3>
+                        <h2>Speed:</h2>
+                        <p class="weatherResults" id="windspeed"></p>
                         <button type="button" class="btn btn-outline-secondary seeWeather" id="fetch-button"
                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 10rem; height: 2rem;">
                             See Today's Weather
@@ -61,112 +65,35 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-9 p-3"> <!--Add sticky note code here in this div-->
-
-                <!-- <button type="button" class="btn btn-outline-secondary"
-                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 18rem; height: 18rem;">
-                    Add new Note
-                </button> -->
-                <!-- Container to hold sticky notes -->
-                <!------ Row 1 ------>
-                <div class="container text-center stickynotes">
-                    <div class="row row-cols-4">
-                        <!------ box 1  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote btn-info btn-lg"
-                                data-toggle="modal" data-target="#myModal"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                            <!-- Modal -->
-                            <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
-
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">New Note</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Note Title"
-                                                    id="floatingTextareaDisabled" disabled></textarea>
-                                                <label for="floatingTextareaDisabled">Title</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Note goes here..."
-                                                    id="floatingTextarea2Disabled" style="height: 100px"
-                                                    disabled></textarea>
-                                                <label for="floatingTextarea2Disabled">Note goes here...</label>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default"
-                                                data-dismiss="modal">Noted</button>
-                                        </div>
-                                    </div>
-
-                                </div>
+            <!-- This is where the  sticky note code will be -->
+            <!-- this is the right column from the bootstrap code -->
+            <div id="stickyNotes" class="col-sm-9 p-3 column">
+                <button type="button" class="btn btn-outline-secondary addNote" id="addNote" data-bs-toggle="modal" data-bs-target="#myModal"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 275px; height: 275px;">
+                    Add New Note
+                </button>
+                <!-- Modal -->
+                <div class="modal" id="myModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input id="noteBody"></input>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="saveNote" type="button" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
-                        <!------ box 2  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                        <!------ box 3  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                        <!------ box 4  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
                     </div>
                 </div>
-                <!-- row 2 -->
-                <div class="container text-center">
-                    <div class="row row-cols-4">
-                        <!------ row 2 box 1  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                        <!------ row 2 box 2  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                        <!------ row 2 box 3  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                        <!------ row 2 box 4  (starting from the left) ------>
-                        <div class="col note">
-                            <button type="button" class="btn btn-outline-secondary addnote"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 9rem; height: 9rem;">
-                                Add new Note
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <!-- <div class="addNote" style="width: 275px; height: 275px;">asdasd</div> -->
+
+
             </div>
         </div>
     </div>
