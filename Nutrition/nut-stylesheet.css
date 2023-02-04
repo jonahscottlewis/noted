@@ -2,4 +2,54 @@
    padding: 25px;
    border: solid;
    border-color: black;
- };
+ }
+
+ .header {
+  background-color: #bbe8d9;
+  height:90px;
+}
+
+.main {
+  font-size: 123px;
+  text-shadow: 3px 2px 2px #ef7c8e;
+}
+ 
+ .nav {
+  background-color: #feedaa;
+  color: black;
+}
+
+ @media screen and (max-width: 992px) {
+  body,
+  .header,
+  .col,
+  .col-6
+  {
+     flex-direction: column;
+     display:block;
+   }
+};
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  body,
+  .header,
+  .col,
+  .col-6
+  {
+     flex-direction: column;
+     display:block;
+   }
+};
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  body,
+  .header,
+  .col,
+  .col-6
+  {
+     flex-direction: column;
+     display:block;
+   }
+};
