@@ -70,7 +70,7 @@ saveNoteBtn.addEventListener("click", function () {
   myModal.hide();
   noteBodyInput.value = "";
 
-  // Local Storage
+  // This is where the Local Storage code will be
   console.log('added');
   // let saveNote = document.querySelector('saveNote');
   // noteBodyInput.value.textContent = '\n' + JSON.stringify('notes', '\t', 1);

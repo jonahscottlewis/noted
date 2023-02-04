@@ -141,13 +141,6 @@ h1 {
         min-width: auto;
     }
 
-
-    .weatherInput,
-    .seeWeather {
-        min-width: auto;
-    }
-
-
     /* modal */
     .notebody {
         width: 450px;
