@@ -120,18 +120,19 @@ h1 {
       text-align: center;
     }
 
+    /* The container holds the sticky notes column and the sidebar column */
     .container {
         flex-direction: column;
         display:block;
     }
-    .stickyNotes {
-        
-    }
 
+    /* the weather sidebar */
     .weatherCard {
         height: 500px;
         min-width: auto;
     }
+
+    /* current contents of the weather card. */
     .cardBody {
         display: flex;
         flex-direction: column;
