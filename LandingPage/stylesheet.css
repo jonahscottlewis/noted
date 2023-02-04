@@ -96,3 +96,46 @@ h1 {
     width: 470px;
     height: 275px;
 }
+
+/* ---------responsive layout--------- */
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body  */
+    body,
+   .header,
+   h1
+   {
+      flex-direction: column;
+      display:block;
+    }
+  
+    /* The header is the blue bar */
+    .header {
+      height: 25vh;
+      width: auto;
+  
+    }
+  
+    /* Main website Title */
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        display:block;
+    }
+    .stickyNotes {
+        
+    }
+
+    .weatherCard {
+        height: 500px;
+        min-width: auto;
+    }
+    .cardBody {
+        display: flex;
+        flex-direction: column;
+        display:block;
+    }
+
+  } 
