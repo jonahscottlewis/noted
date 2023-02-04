@@ -1,13 +1,13 @@
 /* Header styling */
 .header {
     background-color: #bbe8d9;
-    height:90px;
+    height: 90px;
 }
 
 /* Main title in header styling */
 .main {
-        font-size: 123px;
-        text-shadow: 3px 2px 2px #ef7c8e;
+    font-size: 123px;
+    text-shadow: 3px 2px 2px #ef7c8e;
 }
 
 /* navbar */
@@ -21,19 +21,19 @@
     margin-left: 0;
     font-size: 18px;
     display: flex;
-    justify-content:left;
+    justify-content: left;
 }
 
 .row {
-    display:flex;
+    display: flex;
     flex: 1;
-   
+
 }
 
 .column {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 
 
@@ -99,31 +99,32 @@ h1 {
 
 /* ---------responsive layout--------- */
 @media screen and (max-width: 768px) {
+
     /* Use flex-direction to stack the navbar, sidebar, and body  */
     body,
-   .header,
-   h1
-   {
-      flex-direction: column;
-      display:block;
+    .header,
+    h1 {
+        flex-direction: column;
+        display: block;
     }
-  
+
     /* The header is the blue bar */
     .header {
-      height: 25vh;
-      width: auto;
-  
+        height: 25vh;
+        width: auto;
+
     }
-  
+
     /* Main website Title */
     h1 {
-      text-align: center;
+        text-align: center;
     }
 
     /* The container holds the sticky notes column and the sidebar column */
     .container {
         flex-direction: column;
-        display:block;
+        display: block;
+        min-width: auto;
     }
 
     /* the weather sidebar */
@@ -136,8 +137,16 @@ h1 {
     .cardBody {
         display: flex;
         flex-direction: column;
-        display:block;
+        display: block;
+        min-width: auto;
     }
+
+
+    .weatherInput,
+    .seeWeather {
+        min-width: auto;
+    }
+
 
     /* modal */
     .notebody {
@@ -145,4 +154,4 @@ h1 {
         height: 275px;
     }
 
-  } 
+}

@@ -47,7 +47,7 @@ fetchButton.addEventListener('click', getApi);
 
 var fetchButton = document.getElementById('addNote');
 
-function  add(stickyNotes) {}
+function add(stickyNotes) { }
 var stickyNotes = document.createElement('ul')
 
 fetchButton.addEventListener('click', stickyNotes);
@@ -60,7 +60,7 @@ const myModal = new bootstrap.Modal('#myModal', {
 var stickyNotesDiv = document.getElementById("stickyNotes");
 var saveNoteBtn = document.getElementById("saveNote");
 var noteBodyInput = document.getElementById("noteBody");
-saveNoteBtn.addEventListener("click", function() {
+saveNoteBtn.addEventListener("click", function () {
   var noteText = noteBodyInput.value;
   var newNote = document.createElement("div");
   newNote.classList.add("addNote");
@@ -69,5 +69,14 @@ saveNoteBtn.addEventListener("click", function() {
   stickyNotesDiv.appendChild(newNote);
   myModal.hide();
   noteBodyInput.value = "";
+
+  // Local Storage
+  console.log('added');
+  // let saveNote = document.querySelector('saveNote');
+  // noteBodyInput.value.textContent = '\n' + JSON.stringify('notes', '\t', 1);
+  // // document.addEventListener('DOMContentLoaded', ()=>);
+  //   // document.getElementById('svNote').addEventListener('click', addNote);
+  localStorage.setItem('saveNote', JSON.stringify(noteBodyInput));
+
 });
 
