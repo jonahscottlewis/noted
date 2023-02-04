@@ -1,0 +1,30 @@
+:root {
+    --day-selected: rgb(40, 127, 185);
+    --border: grey;
+}
+
+body {
+    margin: 0;
+}
+
+.nav-links {
+    float: right;
+}
+
+#day-picked {
+    border-bottom: 1px var(--border);
+    border-right: 1px var(--border);
+
+}
+
+
+/* use # to call id form HTML */
+#calendar {
+    display: grid;
+    background-color: aqua;
+    /* 1fr = 1 fraction and take up all the space available */
+    /* this will make up the 7 days of the week */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+}
