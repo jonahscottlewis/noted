@@ -139,4 +139,10 @@ h1 {
         display:block;
     }
 
+    /* modal */
+    .notebody {
+        width: 450px;
+        height: 275px;
+    }
+
   } 
