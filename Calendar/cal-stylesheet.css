@@ -1,30 +1,20 @@
-:root {
-    --day-selected: rgb(40, 127, 185);
-    --border: grey;
+/* FOR HEADER + NAVBAR */
+.main {
+  font-size: 123px;
+  text-shadow: 3px 2px 2px #ef7c8e;
 }
 
-body {
-    margin: 0;
+/* header */
+.title-header {
+  background-color: #bbe8d9;
+  height: 90px;
 }
 
-.nav-links {
-    float: right;
-}
-
-#day-picked {
-    border-bottom: 1px var(--border);
-    border-right: 1px var(--border);
-
+/* navbar */
+.nav {
+  background-color: #feedaa;
+  color: black;
 }
 
 
-/* use # to call id form HTML */
-#calendar {
-    display: grid;
-    background-color: aqua;
-    /* 1fr = 1 fraction and take up all the space available */
-    /* this will make up the 7 days of the week */
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 100%;
-}
+
