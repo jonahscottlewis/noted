@@ -1,21 +1,63 @@
-const calendar = document.querySelector('#calendar');
+// 0 = Jan; 1 = Feb; 3 = Mar; etc.
+let currentMonth = 0;
 
-const weekendIsHere = function (day) {
-    // this will create the 7 day week;
-    // 6 when it's saturday, 0 when it's sunday;
-    return day % 7 === 6 || day & 7 === 0;
-};
+// whichever day user selected;
+let selectedMonth = null;
 
+// checking local storage if 'events' is true (?); if not true(:) then we will get an empty string [] back!;
+let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
-// day of the week will be marked as the first of the month until the 31st of the month;
-for (let day = 1; day <= 31; day++) {
+// 
+const calendarMonth = document.getElementById('calendar');
+const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-    const weekend = weekendIsHere(day)
-    console.log (weekend ? "weekend" : "");
+function gettingDate() {
+  const date = new Date();
 
-    // insert.adjacent.HTML add texts to a specific location on the page; 
-    // beforeend = means to add text before the end of an element;
-    calendar.insertAdjacentHTML("beforeend", 
-    // checking to see if the weekend is true(?) if not(:) then it will return an empty string;
-    `<div class="day ${weekend ? "weekend" : ""}"> ${day} </div>`);
-};
+  const day = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  const firstDayEachMonth = new Date(year, month, 1);
+  // 0 = last day of the previous month;
+  // example: 0 + 1 = Jan + 1 = Feb
+  const daysPerMonth = new Date(year, month + 1, 0);
+
+  const dateString = firstDayEachMonth.toLocaleDateString('en-us', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+
+  });
+
+  // emptySquare lets the user know there isn't an actual date in that square;
+  const emptySqaure = weekdays.indexOf(dateString.split(', ')[0]);
+
+  // creating empty squares and date squares;
+  for (let i = 1; i <= emptySqaure + daysPerMonth; i++) {
+
+    // creating a div class="day" whenever an actualDay is there;
+    const actualDayInSquare = document.createElement('div');
+    actualDayInSquare.classList.add('day');
+
+    // creating an empty/blank square or a square with a date inside of it;
+    if (i > emptySqaure) {
+
+      // this will give us the correct date of the square we are currently at;
+      actualDayInSquare.innerText = i - emptySqaure;
+
+      // whenever the user clicks in a dated square;
+      actualDayInSquare.addEventListener('click', function () { console.log('click') });
+
+    } else {
+      // distinguishing between an empty/blank square over dated square;
+      actualDayInSquare.classList.add('empty');
+    }
+
+    calendarMonth.appendChild(actualDayInSquare);
+
+  };
+}
+
+gettingDate();
