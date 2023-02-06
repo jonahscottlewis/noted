@@ -70,13 +70,25 @@ saveNoteBtn.addEventListener("click", function () {
   myModal.hide();
   noteBodyInput.value = "";
 
-  // This is where the Local Storage code will be
-  console.log('added');
+
+
+
+ // This is where the Local Storage code will be
+
+  var note = localStorage.getItem("noteText");
+  saveNoteBtn.addEventListener("click" , mySecondfunction);
+
+  function mySecondfunction () {
+    console.log ("notes", noteBodyInput.value);
+    localStorage.setItem("#saveNoteBtn");
+  }
+ 
+  // console.log('added');
   // let saveNote = document.querySelector('saveNote');
   // noteBodyInput.value.textContent = '\n' + JSON.stringify('notes', '\t', 1);
   // // document.addEventListener('DOMContentLoaded', ()=>);
   //   // document.getElementById('svNote').addEventListener('click', addNote);
-  localStorage.setItem('saveNote', JSON.stringify(noteBodyInput));
+  // localStorage.setItem('saveNote', JSON.stringify(noteBodyInput));
 
 });
 
