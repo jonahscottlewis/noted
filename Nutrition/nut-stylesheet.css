@@ -1,4 +1,8 @@
+ .column{
+  display: block;
+ }
  .card-one {
+   display: inline;
    padding: 25px;
    border: solid;
    border-color: black;
@@ -8,13 +12,13 @@
  }
 
  .card-two {
+   display: inline;
    padding: 25px;
    border: solid;
    border-color: black;
    width: 500px;
    float: right;
  }
-
 
  .header {
    background-color: #bbe8d9;
@@ -38,7 +42,7 @@
    .col,
    .col-6 {
      flex-direction: column;
-     display: block;
+     display: flex;
    }
  }
 
@@ -50,9 +54,10 @@
    body,
    .header,
    .col,
-   .col-6 {
+   .col-6,
+   .column {
      flex-direction: column;
-     display: block;
+     display: flex;
    }
  }
 
@@ -64,9 +69,10 @@
    body,
    .header,
    .col,
-   .col-6 {
+   .col-6,
+   .column {
      flex-direction: column;
-     display: block;
+     display: flex;
    }
  }
 

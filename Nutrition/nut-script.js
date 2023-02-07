@@ -59,6 +59,21 @@ function getApi() {
 
 //Adding event listener to make buttons display results and add URLs to
 fetchButton.addEventListener('click', getApi);
+if (localStorage.getItem('savedRecipe')){
+    storedRecipes = JSON.parse(localStorage.getItem('savedRecipe'));
+    // add for loop for notes  to load upon page load (from local)
+    for (var i = 0; i<storedRecipes.length; i++){
+      var recipeLink = document.createElement('a');
+      var breakEl = document.createElement('br');
+      recipeLink.innerHTML = storedRecipes[i];
+      recipeLink.setAttribute('href',storedRecipes[i]);
+      recipeLink.setAttribute('target','_blank');
+      savedList.append(recipeLink);
+      savedList.append(breakEl);
+    }
+  } else {
+    localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes));
+  }
 addButton.addEventListener('click', function(){
   var addRecipe = document.getElementById('addRecipe');
   var recipeLink = document.createElement('a');
@@ -68,11 +83,14 @@ addButton.addEventListener('click', function(){
   recipeLink.setAttribute('target','_blank');
   savedList.append(recipeLink);
   savedList.append(breakEl);
- addRecipe.value='';
+  storedRecipes.push(addRecipe.value);
+  localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes))
+  addRecipe.value='';
+
+  
+  
 
 });
 
 // How to clear the local storage
 //localStorage.removeItem('notes’)
-
-
