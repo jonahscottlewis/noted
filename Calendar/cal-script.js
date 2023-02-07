@@ -23,6 +23,7 @@ function gettingDate() {
   // example: 0 + 1 = Jan + 1 = Feb
   const daysPerMonth = new Date(year, month + 1, 0);
 
+  // adding 'en-us' will use the English language; 'long' = full spelling of weekday;
   const dateString = firstDayEachMonth.toLocaleDateString('en-us', {
     weekday: 'long',
     year: 'numeric',
@@ -34,12 +35,17 @@ function gettingDate() {
   // emptySquare lets the user know there isn't an actual date in that square;
   const emptySqaure = weekdays.indexOf(dateString.split(', ')[0]);
 
+  // will spell out the entire name of the month instead of showing a number or abbreviated version;
+  document.getElementById('currentMonth').innerText = `${date.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
+
+  calendarMonth.innerHTML = '';
+
   // creating empty squares and date squares;
   for (let i = 1; i <= emptySqaure + daysPerMonth; i++) {
 
     // creating a div class="day" whenever an actualDay is there;
     const actualDayInSquare = document.createElement('div');
-    actualDayInSquare.classList.add('day');
+    actualDayInSquare.classList.add(`day`);
 
     // creating an empty/blank square or a square with a date inside of it;
     if (i > emptySqaure) {
@@ -60,4 +66,18 @@ function gettingDate() {
   };
 }
 
+// 
+function calButtons() {
+  document.getElementById('nextButton').addEventListener('click',
+    function () {
+      selectedMonth++; gettingDate();
+    });
+
+  document.getElementById('previousButton').addEventListener('click',
+    function () {
+      selectedMonth--; gettingDate();
+    });
+}
+
+calButtons();
 gettingDate();
