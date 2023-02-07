@@ -62,13 +62,18 @@ var saveNoteBtn = document.getElementById("saveNote");
 var noteBodyInput = document.getElementById("noteBody");
 var noteArray = []
 if (localStorage.getItem('notes')){
-  noteArray = localStorage.getItem(JSON.parse('notes'));
+  noteArray = JSON.parse(localStorage.getItem('notes'));
   // add for loop for notes  to load upon page load (from local)
   for (var i = 0; i<noteArray.length; i++){
+  var newNote = document.createElement("div");
+  newNote.classList.add("addNote");
+  newNote.style = "width: 275px; height: 275px";
+  newNote.textContent = noteArray[i];
+  stickyNotesDiv.appendChild(newNote);
 
   }
 } else {
-  localStorage.setItem('notes', JSON.stringify([]));
+  localStorage.setItem('notes', JSON.stringify(noteArray));
 }
 saveNoteBtn.addEventListener("click", function () {
   var noteText = noteBodyInput.value;
