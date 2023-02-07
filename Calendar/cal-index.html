@@ -42,13 +42,12 @@
         </ul>
     </div>
 
-    <div id="cal-container">
-        <div id="cal-header">
-            <div id="currentMonth"></div>
-
+    <div id="container">
+        <div id="month-header">
+            <div id="monthShown"></div>
             <div>
-                <button id="previousButton">Previous</button>
-                <button id="nextButton">Next</button>
+                <button id="back-Btn">Back</button>
+                <button id="next-Btn">Next</button>
             </div>
         </div>
 
@@ -62,19 +61,36 @@
             <div>Saturday</div>
         </div>
 
-        <!-- JS coded-->
         <div id="calendar"></div>
+    </div>
+
+    <div id="newModal">
+        <h2>Add Event</h2>
+
+        <input id="newEventTitle" placeholder="Event Title" />
+
+        <button id="save-Btn">Save</button>
+        <button id="cancel-Btn">Cancel</button>
+    </div>
+
+    <div id="deleteModal">
+        <h2>Event</h2>
+
+        <p id="eventText"></p>
+
+        <div id="event-btns">
+            <button id="delete-Btn">Delete</button>
+            <button id="close-Btn">Close</button>
+        </div>
 
     </div>
+
+    <div id="modal-bg"></div>
 
     <!-- bootstrap navbar -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
 
     <script src="./cal-script.js"></script>
 </body>
