@@ -61,15 +61,15 @@ var stickyNotesDiv = document.getElementById("stickyNotes");
 var saveNoteBtn = document.getElementById("saveNote");
 var noteBodyInput = document.getElementById("noteBody");
 var noteArray = []
-if (localStorage.getItem('notes')){
+if (localStorage.getItem('notes')) {
   noteArray = JSON.parse(localStorage.getItem('notes'));
   // add for loop for notes  to load upon page load (from local)
-  for (var i = 0; i<noteArray.length; i++){
-  var newNote = document.createElement("div");
-  newNote.classList.add("addNote");
-  newNote.style = "width: 275px; height: 275px";
-  newNote.textContent = noteArray[i];
-  stickyNotesDiv.appendChild(newNote);
+  for (var i = 0; i < noteArray.length; i++) {
+    var newNote = document.createElement("div");
+    newNote.classList.add("addNote");
+    newNote.style = "width: 275px; height: 275px";
+    newNote.textContent = noteArray[i];
+    stickyNotesDiv.appendChild(newNote);
 
   }
 } else {
@@ -87,10 +87,13 @@ saveNoteBtn.addEventListener("click", function () {
   noteArray.push(noteText);
 
   localStorage.setItem('notes', JSON.stringify(noteArray));
-    newNote.textContent = localStorage.getItem(JSON.parse('notes'));
-    console.log(localStorage.getItem('notes'));
+  newNote.textContent = localStorage.getItem(JSON.parse('notes'));
+  console.log(localStorage.getItem('notes'));
 })
 
-
-
-
+// // clear sticky Notes/Local
+// var clearNotes = document.getElementById('clearNotesBtn');
+// clearNotes.addEventListener('click', function () {
+//   localStorage.removeItem('notes')
+//   location.reload()
+// });
