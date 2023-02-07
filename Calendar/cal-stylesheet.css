@@ -1,3 +1,5 @@
+
+
 /* FOR HEADER + NAVBAR */
 .main {
   font-size: 123px;
@@ -16,5 +18,39 @@
   color: black;
 }
 
+body #cal-container {
+  margin-top: 30px;
+}
 
+#cal-header {
+  padding: 10px;
+  color: #ef7c8e;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+}
+
+#cal-header button {
+  background-color: #ef7c8e;
+  border-radius: 4px;
+  margin: 3px;
+  font-size: 20px;
+  border: none;
+  text-align: center;
+  line-height: 32px;
+  width: 115px;
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* names of weekdays */
+#weekdays div {
+  padding: 10px;
+  font-size: 20px;
+}
 
