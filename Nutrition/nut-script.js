@@ -57,13 +57,6 @@ function getApi() {
     );
 };
 
-//$('#add_button').on('click', function () {
-  //var title = $(this).siblings('#recipe_title').attr('id');
-  //var link = $(this).siblings('#recipe_link').val();
-  //console.log(title);
-//});
-
-
 //Adding event listener to make buttons display results and add URLs to
 fetchButton.addEventListener('click', getApi);
 addButton.addEventListener('click', function(){
