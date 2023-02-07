@@ -69,19 +69,23 @@ saveNoteBtn.addEventListener("click", function () {
   stickyNotesDiv.appendChild(newNote);
   myModal.hide();
   noteBodyInput.value = "";
-
+}
 
 
 
  // This is where the Local Storage code will be
 
-  var note = localStorage.getItem("noteText");
-  saveNoteBtn.addEventListener("click" , mySecondfunction);
+  // var note = localStorage.setItem("noteText");
+  saveNoteBtn.addEventListener("click" , mySecondfunction)
 
-  function mySecondfunction () {
-    console.log ("notes", noteBodyInput.value);
-    localStorage.setItem("#saveNoteBtn");
-  }
+  function mySecondfunction() {
+    localStorage.setItem('added' + JSON.stringify ('newNote.textContent'));
+    newNote.textContent = localStorage.getItem('added');
+     console.log (localStorage.getItem('added'));
+
+// console.log ("notes", noteBodyInput.value);
+    // localStorage.setItem("#saveNoteBtn");
+  // }
  
   // console.log('added');
   // let saveNote = document.querySelector('saveNote');
