@@ -60,6 +60,21 @@ const myModal = new bootstrap.Modal('#myModal', {
 var stickyNotesDiv = document.getElementById("stickyNotes");
 var saveNoteBtn = document.getElementById("saveNote");
 var noteBodyInput = document.getElementById("noteBody");
+var noteArray = []
+if (localStorage.getItem('notes')){
+  noteArray = JSON.parse(localStorage.getItem('notes'));
+  // add for loop for notes  to load upon page load (from local)
+  for (var i = 0; i<noteArray.length; i++){
+  var newNote = document.createElement("div");
+  newNote.classList.add("addNote");
+  newNote.style = "width: 275px; height: 275px";
+  newNote.textContent = noteArray[i];
+  stickyNotesDiv.appendChild(newNote);
+
+  }
+} else {
+  localStorage.setItem('notes', JSON.stringify(noteArray));
+}
 saveNoteBtn.addEventListener("click", function () {
   var noteText = noteBodyInput.value;
   var newNote = document.createElement("div");
@@ -69,26 +84,13 @@ saveNoteBtn.addEventListener("click", function () {
   stickyNotesDiv.appendChild(newNote);
   myModal.hide();
   noteBodyInput.value = "";
+  noteArray.push(noteText);
+
+  localStorage.setItem('notes', JSON.stringify(noteArray));
+    newNote.textContent = localStorage.getItem(JSON.parse('notes'));
+    console.log(localStorage.getItem('notes'));
+})
 
 
 
-
- // This is where the Local Storage code will be
-
-  var note = localStorage.getItem("noteText");
-  saveNoteBtn.addEventListener("click" , mySecondfunction);
-
-  function mySecondfunction () {
-    console.log ("notes", noteBodyInput.value);
-    localStorage.setItem("#saveNoteBtn");
-  }
- 
-  // console.log('added');
-  // let saveNote = document.querySelector('saveNote');
-  // noteBodyInput.value.textContent = '\n' + JSON.stringify('notes', '\t', 1);
-  // // document.addEventListener('DOMContentLoaded', ()=>);
-  //   // document.getElementById('svNote').addEventListener('click', addNote);
-  // localStorage.setItem('saveNote', JSON.stringify(noteBodyInput));
-
-});
 
