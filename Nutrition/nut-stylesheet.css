@@ -1,23 +1,34 @@
- .column{
-  display: block;
+ .column-left {
+  float: left;
+  
  }
+
+ .column-right {
+  float: right;
+  
+  
+ }
+
  .card-one {
-   display: inline;
+   flex-direction: column;
+   display: flex;
+   float: left;
    padding: 25px;
+   width: 400px;
    border: solid;
    border-color: black;
-   width: 500px;
-   float: left;
-
+   
  }
 
  .card-two {
-   display: inline;
+   flex-direction: column;
+   display: flex;
+   float: right;
    padding: 25px;
+   width: 400px;
    border: solid;
    border-color: black;
-   width: 500px;
-   float: right;
+   
  }
 
  .header {
@@ -35,45 +46,76 @@
    color: black;
  }
 
- @media screen and (max-width: 992px) {
 
-   body,
-   .header,
-   .col,
-   .col-6 {
-     flex-direction: column;
-     display: flex;
-   }
- }
+/* Tablets */
+@media screen and (max-width: 992px) {
 
- ;
+  body,
+  .header,
+  .col,
+  .col-6,
+  h1 {
 
- /* Large smartphones - navbar changes color */
- @media screen and (max-width: 768px) {
+    flex-direction: column;
+    display: block;
 
-   body,
-   .header,
-   .col,
-   .col-6,
-   .column {
-     flex-direction: column;
-     display: flex;
-   }
- }
+  }
 
- ;
+  .header {
+   height: 15vh;
+   width: auto;
 
- /* Small smartphones - image placeholders change color */
- @media screen and (max-width: 576px) {
+}
 
-   body,
-   .header,
-   .col,
-   .col-6,
-   .column {
-     flex-direction: column;
-     display: flex;
-   }
- }
 
- ;
+}
+
+;
+
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+
+  body,
+  .header,
+  .col,
+  .col-6,
+  h1 {
+
+    flex-direction: column;
+    display: block;
+
+  }
+
+  .header {
+   height: 15vh;
+   width: auto;
+
+}
+
+
+}
+
+;
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {
+
+  body,
+  .header,
+  .col,
+  .col-6,
+  h1 {
+    flex-direction: column;
+    display: block;
+  }
+
+  .header {
+   height: 15vh;
+   width: auto;
+
+}
+
+
+}
+
+;

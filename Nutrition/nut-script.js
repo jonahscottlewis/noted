@@ -41,17 +41,16 @@ function getApi() {
         // Adding the recipe title to display with the url.
         recipeTitle.innerHTML = data.results[i].title;
         recipeLink.innerHTML = sourceUrl;
-        recipeDiv.append(recipeTitle, recipeLink, addButton);
+        recipeDiv.append(recipeTitle, recipeLink);
 
-        //resultsCard.appendChild(recipeTitle);
+        
         resultsCard.append(recipeDiv);
-        //addButton.appendChild(recipeLink);
+        
 
         recipeLink.classList.add('recipeUrl');
       };
 
       urlResults.push(sourceUrl);
-      //sourceUrl.push(recipeTitle);
 
     }
     );
@@ -59,38 +58,37 @@ function getApi() {
 
 //Adding event listener to make buttons display results and add URLs to
 fetchButton.addEventListener('click', getApi);
-if (localStorage.getItem('savedRecipe')){
-    storedRecipes = JSON.parse(localStorage.getItem('savedRecipe'));
-    // add for loop for notes  to load upon page load (from local)
-    for (var i = 0; i<storedRecipes.length; i++){
-      var recipeLink = document.createElement('a');
-      var breakEl = document.createElement('br');
-      recipeLink.innerHTML = storedRecipes[i];
-      recipeLink.setAttribute('href',storedRecipes[i]);
-      recipeLink.setAttribute('target','_blank');
-      savedList.append(recipeLink);
-      savedList.append(breakEl);
-    }
-  } else {
-    localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes));
+if (localStorage.getItem('savedRecipe')) {
+  storedRecipes = JSON.parse(localStorage.getItem('savedRecipe'));
+  // add for loop for notes  to load upon page load (from local)
+  for (var i = 0; i < storedRecipes.length; i++) {
+    var recipeLink = document.createElement('a');
+    var breakEl = document.createElement('br');
+    recipeLink.innerHTML = storedRecipes[i];
+   //When a link is clicked it will open up in a new tab rather than redirection your current webpage.
+    recipeLink.setAttribute('href', storedRecipes[i]);
+    recipeLink.setAttribute('target', '_blank');
+    savedList.append(recipeLink);
+    savedList.append(breakEl);
   }
-addButton.addEventListener('click', function(){
+} else {
+  localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes));
+}
+// Adding designated recipes to local storage and displaying them on the page on reload.
+addButton.addEventListener('click', function () {
   var addRecipe = document.getElementById('addRecipe');
   var recipeLink = document.createElement('a');
   var breakEl = document.createElement('br');
   recipeLink.innerHTML = addRecipe.value;
-  recipeLink.setAttribute('href',addRecipe.value);
-  recipeLink.setAttribute('target','_blank');
+  recipeLink.setAttribute('href', addRecipe.value);
+  recipeLink.setAttribute('target', '_blank');
   savedList.append(recipeLink);
   savedList.append(breakEl);
   storedRecipes.push(addRecipe.value);
   localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes))
-  addRecipe.value='';
-
-  
-  
+  addRecipe.value = '';
 
 });
 
 // How to clear the local storage
-//localStorage.removeItem('notes’)
+//localStorage.removeItem('savedRecipe’)
