@@ -65,7 +65,7 @@ function refresh() {
   for (let i = 1; i <= blankSpaces + daysEachMonth; i++) {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
-
+    
     const dayString = `${month + 1}/${i - blankSpaces}/${year}`;
 
     if (i > blankSpaces) {
