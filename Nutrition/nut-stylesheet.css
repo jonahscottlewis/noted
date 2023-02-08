@@ -1,27 +1,34 @@
- .column {
-  flex-direction: column;
-  display: block;
-  width: auto;
+ .column-left {
+  float: left;
+  
+ }
+
+ .column-right {
+  float: right;
+  
+  
  }
 
  .card-one {
    flex-direction: column;
-   display: block;
+   display: flex;
+   float: left;
    padding: 25px;
-   width: auto;
+   width: 400px;
    border: solid;
    border-color: black;
-   float: left;
+   
  }
 
  .card-two {
    flex-direction: column;
-   display: block;
+   display: flex;
+   float: right;
    padding: 25px;
-   width: auto;
+   width: 400px;
    border: solid;
    border-color: black;
-   float: right;
+   
  }
 
  .header {
@@ -38,6 +45,7 @@
    background-color: #feedaa;
    color: black;
  }
+
 
 /* Tablets */
 @media screen and (max-width: 992px) {
@@ -58,7 +66,6 @@
    width: auto;
 
 }
-
 
 
 }
