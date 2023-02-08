@@ -16,6 +16,14 @@
     color: black;
 }
 
+/* Clear notes button */
+.clearNotes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 15px;
+    justify-content: right;
+}
+
 /* Container that holds sidebar and stickynotes section */
 .container {
     margin-left: 0;
