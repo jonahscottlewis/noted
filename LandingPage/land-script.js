@@ -91,9 +91,9 @@ saveNoteBtn.addEventListener("click", function () {
   console.log(localStorage.getItem('notes'));
 })
 
-// // clear sticky Notes/Local
-// var clearNotes = document.getElementById('clearNotesBtn');
-// clearNotes.addEventListener('click', function () {
-//   localStorage.removeItem('notes')
-//   location.reload()
-// });
+// clear sticky Notes/Local
+var clearNotes = document.getElementById('clearNotesBtn');
+clearNotes.addEventListener('click', function () {
+  localStorage.removeItem('notes')
+  location.reload()
+});
