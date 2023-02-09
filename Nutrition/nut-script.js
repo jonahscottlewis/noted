@@ -97,4 +97,3 @@ clearButton.addEventListener('click', function() {
   localStorage.removeItem('savedRecipe')
   savedList.innerHTML = ''
 });
-
