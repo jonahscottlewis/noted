@@ -1,6 +1,7 @@
 // Targeting search button by ID  
 var fetchButton = document.getElementById('fetch-button');
 var addButton = document.getElementById('add');
+var clearButton = document.getElementById('clear-button');
 var recipeCard = document.getElementById('recipe');
 var savedList = document.getElementById('savedList');
 var storedRecipes = [];
@@ -88,6 +89,12 @@ addButton.addEventListener('click', function () {
   localStorage.setItem('savedRecipe', JSON.stringify(storedRecipes))
   addRecipe.value = '';
 
+});
+
+clearButton.addEventListener('click', function() {
+  console.log('click')
+  localStorage.removeItem('savedRecipe')
+  savedList.innerHTML = ''
 });
 
 // How to clear the local storage
