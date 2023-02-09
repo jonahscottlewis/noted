@@ -3,7 +3,7 @@ var fetchButton = document.getElementById('fetch-button');
 function getApi() {
   // fetch request gets a list of all 
   var weatherInput = document.querySelector('.weatherInput').value
-  var requestlatlongUrl = 'http://api.openweathermap.org/geo/1.0/zip?zip=' + weatherInput + '&appid=301abb42e89fddd7a250ac02d53fe894';
+  var requestlatlongUrl = 'https://api.openweathermap.org/geo/1.0/zip?zip=' + weatherInput + '&appid=301abb42e89fddd7a250ac02d53fe894';
 
   fetch(requestlatlongUrl)
     .then(function (response) {
