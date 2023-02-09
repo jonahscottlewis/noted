@@ -91,11 +91,9 @@ addButton.addEventListener('click', function () {
 
 });
 
+// Adding button for clearing the local storage as well as items from saved recipes list.
 clearButton.addEventListener('click', function() {
   console.log('click')
   localStorage.removeItem('savedRecipe')
   savedList.innerHTML = ''
 });
-
-// How to clear the local storage
-//localStorage.removeItem('savedRecipe’)
