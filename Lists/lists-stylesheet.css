@@ -1,0 +1,28 @@
+#favourite-foods {
+    list-style-type: square;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+#favourite-foods li {
+    margin-bottom: 10px;
+}
+
+
+.header {
+    background-color: #bbe8d9;
+    height:90px;
+}
+
+.main {
+        font-size: 123px;
+        text-shadow: 3px 2px 2px #ef7c8e;
+}
+
+
+.nav {
+    background-color: #feedaa;
+    color: black;
+}
