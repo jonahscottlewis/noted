@@ -29,7 +29,7 @@
 /* -------------------------------------------- */
 
 body #container {
-  margin-top: 50px;
+  margin-top: 35px;
   background-color: #FFFCFF;
   margin-left: 20%;
   margin-right: 20%;
@@ -66,22 +66,21 @@ button {
 /* inside the calendar itself */
 
 #weekdays {
-  width: 100%;
+  width: 90%;
   display: flex;
   color: #247BA0;
-  background-color: #e5f6ff;
-  justify-content: space-between;
   font-size: 30px;
-  flex-direction: row;
+  justify-content: space-between;
 }
 
 #weekdays div {
-  padding: 25px 50px 10px 25px;
+  padding: 25px 25px 10px 25px;
+  margin-left: 5%;
 }
 
 #calendar {
-  width: 100%;
-  margin: auto;
+  width: 98%;
+  margin-left: 6%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -92,8 +91,7 @@ button {
   height: 135px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: var(--pink);
-  margin: 25px 12px 20px 12px;
+  background-color: #ffffff;
   box-shadow: 0px 0px 5px var(--box-shadow);
   display: flex;
   flex-direction: column;
@@ -106,7 +104,7 @@ button {
 }
 
 .day+#currentDay {
-  background-color: #56ff64;
+  background-color: #a8aba8;
 }
 
 /* -------------------------------------------- */
@@ -125,8 +123,8 @@ button {
 
 .square-padding {
   cursor: default !important;
-  background-color: #FFFCFF !important;
-  box-shadow: none !important;
+  background-color: #e3e3e3 !important;
+
 }
 
 #newModal,
@@ -148,7 +146,7 @@ button {
   width: 12%;
 }
 
-#newEventTitle {        
+#newEventTitle {
   padding: 15px;
   width: 100%;
   box-sizing: border-box;
@@ -212,7 +210,7 @@ button {
 /* Mobile friendly specs */
 
 @media screen and (max-width: 576px) {
-  
+
   /* title of webpage */
   .main {
     text-align: center;
