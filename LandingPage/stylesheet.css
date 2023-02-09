@@ -32,20 +32,16 @@
     justify-content: left;
 }
 
-.row {
-    display: flex;
-    flex: 1;
-
-}
-
-.column {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-
 /* Weather sidebar */
+.weather {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    width: 295px;
+    margin-left: 15px;
+}
+
 .weatherCard {
     width: 288px;
     height: 600px;
@@ -93,6 +89,17 @@ h2 {
     padding: 3rem;
 }
 
+/* Stickynote layout */
+.stickyNotes {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position:absolute;
+    width: 75%;
+    justify-content: left;
+    margin-left: 300px;
+}
+
 /* Modal Styling */
 /* modal Title */
 h1 {
@@ -121,6 +128,10 @@ h1 {
         height: 25vh;
         width: auto;
 
+    }
+
+    .clearNotes {
+        justify-content: center;
     }
 
     /* Main website Title */
@@ -155,4 +166,39 @@ h1 {
         height: 275px;
     }
 
+}
+
+@media screen and (max-width: 1024px) {
+    body,
+    .header,
+    h1 {
+        flex-direction: column;
+        display: block;
+    }
+
+    /* The header is the blue bar */
+    .header {
+        height: 25vh;
+        width: auto;
+
+    }
+
+    /* Main website Title */
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    .clearNotes {
+        justify-content: center;
+}
+.stickyNotes {
+    position:static;
+    margin:0;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    order:-2;
+}
 }

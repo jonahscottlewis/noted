@@ -21,7 +21,7 @@
     </header>
 
     <!-- Navbar-found on bootstrap under nav and tabs-->
-    <div class="'nav-bar-info">
+    <div class="nav-bar-info">
         <ul class="nav justify-content-end" class="nav">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
@@ -31,10 +31,10 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Nutrition/nut-index.html">Nutrition</a>
-            </li>
+            <!-- </li>
             <li class="nav-item">
                 <a class="nav-link" href="../Lists/lists-index.html">Lists</a>
-            </li>
+            </li> -->
             <!-- Not ready to use this link yet -->
             <!-- <li class="nav-item">
                 <a class="nav-link disabled">Journal</a>
@@ -45,20 +45,20 @@
     <div id="container">
         <div id="month-header">
             <div id="monthShown"></div>
-            <div>
+            <div id="month-btns">
                 <button id="back-Btn">Back</button>
                 <button id="next-Btn">Next</button>
             </div>
         </div>
 
         <div id="weekdays">
-            <div>Sunday</div>
-            <div>Monday</div>
-            <div>Tuesday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
         </div>
 
         <div id="calendar"></div>
@@ -69,8 +69,11 @@
 
         <input id="newEventTitle" placeholder="Event Title" />
 
-        <button id="save-Btn">Save</button>
-        <button id="cancel-Btn">Cancel</button>
+        <div id="create-btns">
+            <button id="save-Btn">Save</button>
+            <button id="cancel-Btn">Cancel</button>
+        </div>
+
     </div>
 
     <div id="deleteModal">
@@ -78,7 +81,7 @@
 
         <p id="eventText"></p>
 
-        <div id="event-btns">
+        <div id="event-end-btns">
             <button id="delete-Btn">Delete</button>
             <button id="close-Btn">Close</button>
         </div>

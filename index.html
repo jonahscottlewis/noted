@@ -27,9 +27,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="./Nutrition/nut-index.html">Nutrition</a>
             </li>
-            <li class="nav-item">
+            <!-- Page wasn't ready for presentation -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="./Lists/lists-index.html">Lists</a>
-            </li>
+            </li> -->
             <!-- Not ready to use this link yet -->
             <!-- <li class="nav-item">
                 <a class="nav-link disabled">Journal</a>
@@ -37,7 +38,7 @@
         </ul>
         <!--------- Remove Notes Button --------->
         <div class="clearNotes">
-            <button type="button" class="btn btn-outline-secondary clearNotesBtn" id="clearNotes"
+            <button type="button" class="btn btn-outline-secondary clearNotesBtn" id="clearNotesBtn"
                 style=" --bs-btn-font-size: 1.2rem; width: 13rem; height: 2.5rem;">
                 Clear Sticky Notes
             </button>
@@ -54,7 +55,7 @@
     <div class="container">
         <div class="row align-items-start ">
             <!-- the column in which holds the weather API -->
-            <div class="col-3 p-3 mb-2 column">
+            <div class="weather">
                 <!-- card that holds the api within the sidebar -->
                 <div class="card weatherCard">
                     <div class="card-body">
@@ -78,15 +79,29 @@
                         </button>
                     </div>
                 </div>
+                <style>
+                    .weather {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                    }
+                </style>
             </div>
             <!-- This is where the  sticky note code will be -->
             <!-- this is the right column from the bootstrap code -->
-            <div id="stickyNotes" class="col-sm-9 p-3 column stickyNotes">
+            <div id="stickyNotes" class="stickyNotes">
                 <button type="button" class="btn btn-outline-secondary addNote" id="addNote" data-bs-toggle="modal"
                     data-bs-target="#myModal"
                     style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; width: 275px; height: 275px;">
                     Add New Note
                 </button>
+                <style>
+                    .stickyNotes {
+                        display: flex;
+                        flex-wrap: row wrap;
+                        flex-direction: row;
+                    }
+                </style>
                 <!-- Modal -->
                 <div class="modal" id="myModal" tabindex="-1">
                     <div class="modal-dialog">
