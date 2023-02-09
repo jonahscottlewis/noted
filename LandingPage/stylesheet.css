@@ -194,6 +194,9 @@ h1 {
         justify-content: center;
 }
 .stickyNotes {
+    position:static;
+    margin:0;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     order:-2;
