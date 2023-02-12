@@ -12,22 +12,22 @@
 </head>
 
 <body>
-  <header class="header">
+  <div class="header">
+  <header>
     <h1 class="main">Noted</h1>
   </header>
+</div>
   <!-- Navbar-found on bootstrap under nav and tabs-->
   <div>
     <ul class="nav justify-content-end">
-      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li>
-      <li class="nav-item"> <a class="nav-link"
-          href="file:///C:/Users/jonah/bootcamp/projects/noted/Calendar/cal-index.html">Calendar</a> </li>
+      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="../index.html">Home</a> </li> 
+      <li class="nav-item"> <a class="nav-link" href="../Calendar/cal-index.html">Calendar</a> </li>
       <li class="nav-item"> <a class="nav-link" href="#">Nutrition</a> </li>
-      <li class="nav-item"> <a class="nav-link"
-          href="file:///C:/Users/jonah/bootcamp/projects/noted/Lists/lists-index.html">Lists</a> </li>
+      <!--<li class="nav-item"> <a class="nav-link" href="../Lists/lists-index.html">Lists</a> </li>-->
     </ul>
   </div>
   <div class="container text-center">
-    <div class="col-6">
+    <div class="column-left">
       <div class="card-one recipeUrl" id="recipe">
         <h4>Recipes</h4>
         <input id="userSearch" type="search" placeholder="Search Recipe"></input>
@@ -37,13 +37,14 @@
     </div>
 
     <div class="row">
-      <div class="col" id="mealPlan">
+      <div class="column-right" id="mealPlan">
         <div class="card-two">
           <h4>Meal plan</h4>
           <input class="add" id="addRecipe" type="text" placeholder="+ your recipe URL here"></input>
           <button class="add btn btn-danger" id="add">Add</button>
 
           <ul id="savedList"></ul>
+          <button class="btn btn-danger" id="clear-button">clear</button>
 
         </div>
       </div>
