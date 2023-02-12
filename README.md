@@ -22,9 +22,9 @@ Open Weather API:
 An API which has weather information based on longitude and latitude. Input your area code and the screen will display the current temperature, min-max-temperature, humidity and wind speed in the designated area.
 
 # Hopes for Future Development
-*Add a Sign-in Page and Journaling Page
-*Finishing development on Calendar and Lists pages
-*Add more media query breaks
-*Expand on styling 
+*Add a Sign-in Page and Journaling Page for more in depth notes.
+*Finishing development on Calendar and Lists pages.
+*Add more media query breaks to make mobile friendly.
+*Expand on styling.
 *Add another API to add to the nutrition page which counts the calories per the ingredients for shown recipes.
 
