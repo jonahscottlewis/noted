@@ -12,6 +12,10 @@ Noted is an application which is designed to help us keep track of some of the m
 # Description
 Noted is an application designed to help you keep track of your daily life. It comes equipped with two APIs which help it do so. These APIs are Open Weather for the current weather conditions in a specified area and Spoonacular which has a catalogue of recipes accessed through searching keywords. In addition you can write yourself reminders or notes to be referenced.
 
+![Noted Project Screenshot](assets/Noted-WireFrame/2.png?raw=true "Noted Landing Page WireFrame")
+
+![Noted Project Screenshot](assets/Noted-WireFrame/4.png?raw=true "Noted Nutrition Page WireFrame")
+
 # Motivation for Development
 Other than fulfilling the assignment requirements and displaying our coding capabilities the motivation to develop the Noted app is to create an application to help organize your daily life. Using the APIs abilities we can make activities that everyone does regularly easier.
 
