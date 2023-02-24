@@ -1,172 +1,119 @@
-:root {
-  --button: #2a6ea6;
-  --box-shadow: #4d6931;
-  --pink: #d36c6c;
-
-
-}
-
-/* FOR HEADER + NAVBAR */
-.main {
-  font-size: 123px;
-  text-shadow: 3px 2px 2px #ef7c8e;
-
-}
-
-/* header */
-.title-header {
-  background-color: #bbe8d9;
-  height: 90px;
-}
-
-/* navbar */
-.nav {
-  background-color: #feedaa;
-  color: black;
-  font-size: 20px;
-}
-
-/* -------------------------------------------- */
-
-body #container {
-  margin-top: 35px;
+body {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
   background-color: #FFFCFF;
-  margin-left: 20%;
-  margin-right: 20%;
 }
-
 button {
-  width: 90px;
+  width: 75px;
   cursor: pointer;
-  box-shadow: 0px 0px 4px grey;
+  box-shadow: 0px 0px 2px gray;
   border: none;
   outline: none;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
-  font-size: 20px;
 }
 
-
-#month-header {
+#header {
   padding: 10px;
-  color: var(--pink);
-  font-size: 35px;
+  color: #d36c6c;
+  font-size: 26px;
   font-family: sans-serif;
   display: flex;
   justify-content: space-between;
 }
-
-#month-header button {
-  background-color: #2a6ea6;
-  font-size: 23px;
+#header button {
+  background-color:#92a1d1;
 }
-
-/* -------------------------------------------- */
-/* inside the calendar itself */
-
+#container {
+  width: 770px;
+}
 #weekdays {
-  width: 90%;
+  width: 100%;
   display: flex;
   color: #247BA0;
-  font-size: 30px;
-  justify-content: space-between;
 }
-
 #weekdays div {
-  padding: 25px 25px 10px 25px;
-  margin-left: 5%;
+  width: 100px;
+  padding: 10px;
 }
-
 #calendar {
-  width: 98%;
-  margin-left: 6%;
+  width: 100%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
-
 .day {
-  width: 190px;
+  width: 100px;
   padding: 10px;
-  height: 135px;
+  height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 5px var(--box-shadow);
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0px 0px 3px #CBD4C2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 25px;
 }
-
 .day:hover {
-  background-color: #55bce8;
+  background-color: #e8faed;
 }
 
-.day+#currentDay {
-  background-color: #a8aba8;
+.day + #currentDay {
+  background-color:#e8f4fa;
 }
-
-/* -------------------------------------------- */
-/* modal information */
-
-.eventMade {
-  font-size: 20px;
-  font-weight: 100px;
-  padding: 3px 3px 3px 12px;
-  background-color: #f5f5f5;
-  color: black;
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
   border-radius: 5px;
   max-height: 55px;
   overflow: hidden;
 }
-
-.square-padding {
+.padding {
   cursor: default !important;
-  background-color: #e3e3e3 !important;
-
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
 }
-
-#newModal,
-#deleteModal {
+#newEventModal, #deleteEventModal {
   display: none;
   z-index: 20;
-  padding: 30px;
+  padding: 25px;
   background-color: #e8f4fa;
   box-shadow: 0px 0px 3px black;
   border-radius: 5px;
-  top: 150px;
-  left: calc(55% - 270px);
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
   position: absolute;
   font-family: sans-serif;
 }
-
-#deleteModal {
-  left: calc(55% - 270px);
-  width: 12%;
-}
-
-#newEventTitle {
-  padding: 15px;
+#eventTitleInput {
+  padding: 10px;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   border-radius: 3px;
   outline: none;
   border: none;
-  box-shadow: 0px 0px 3px var(--box-shadow);
-  font-size: 20px;
+  box-shadow: 0px 0px 3px gray;
 }
-
-#newEventTitle.error {
+#eventTitleInput.error {
   border: 2px solid red;
 }
-
-#eventText {
-  font-size: 20px;
+#cancelButton, #deleteButton {
+  background-color: #d36c6c;
 }
-
-#modal-bg {
+#saveButton, #closeButton {
+  background-color: #92a1d1;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
   display: none;
   top: 0px;
   left: 0px;
@@ -174,69 +121,5 @@ button {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* -------------------------------------------- */
-/* modal buttons */
-
-
-#cancel-Btn,
-#delete-Btn {
-  background-color: var(--pink);
-
-}
-
-#save-Btn,
-#close-Btn {
-  background-color: var(--button)
-}
-
-#create-btns {
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#event-end-btns {
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-/* -------------------------------------------- */
-/* Mobile friendly specs */
-
-@media screen and (max-width: 576px) {
-
-  /* title of webpage */
-  .main {
-    text-align: center;
-    font-size: 65px;
-  }
-
-  .nav {
-    flex-direction: column;
-    text-align: center;
-
-  }
-
-  .day {
-    flex: 25%;
-    flex-direction: column;
-    margin: 0;
-    text-align: center;
-  }
-
-  #month-header {
-    flex-direction: column;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  #weekdays {
-    display: none;
-  }
+  background-color: rgba(0,0,0,0.8);
 }
