@@ -1,9 +1,25 @@
-body {
+.header1 {
+  background-color: #bbe8d9;
+  height: 90px;
+}
+
+.h1 {
+  font-size: 123px;
+  text-shadow: 3px 2px 2px #ef7c8e;
+}
+
+.nav {
+  background-color: #feedaa;
+  color: black;
+}
+
+main {
   display: flex;
   margin-top: 50px;
   justify-content: center;
   background-color: #FFFCFF;
 }
+
 button {
   width: 75px;
   cursor: pointer;
