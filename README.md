@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/static/v1?label=License&message=MIT&color=GREEN)
 
-## Table of Contents
+# Table of Contents
 * [User Story](#user)
 * [Elevator Pitch](#elevator)
 * [Description](#description)
@@ -24,14 +24,14 @@ Noted is an application which is designed to help us keep track of some of the m
 # Description
 Noted is an application designed to help you keep track of your daily life. It comes equipped with two APIs which help it do so. These APIs are Open Weather for the current weather conditions in a specified area and Spoonacular which has a catalogue of recipes accessed through searching keywords. In addition you can write yourself reminders or notes to be referenced.
 
-![Noted Project Screenshot](assets/Noted-WireFrame/2.png?raw=true "Noted Landing Page 1")
+![Noted Project Screenshot](assets\screenshots\landing(83).png?raw=true "Noted Landing Page 1")
 
-![Noted Project Screenshot](assets/Noted-WireFrame/4.png?raw=true "Noted Nutrition Page 2")
+![Noted Project Screenshot](assets\screenshots\landing(85).png?raw=true "Noted Nutrition Page 2")
 
-![Noted Project Screenshot](assets/Noted-WireFrame/4.png?raw=true "Noted Nutrition Page 3")
+![Noted Project Screenshot](assets\screenshots\landing(86).png?raw=true "Noted Nutrition Page 3")
 
-## Github Link
-[testing a change](link)
+# Github Link
+[View The Noted Project Deployment Here!](https://jonahscottlewis.github.io/noted/)
 
 # Motivation for Development
 Other than fulfilling the assignment requirements and displaying our coding capabilities the motivation to develop the Noted app is to create an application to help organize your daily life. Using the APIs abilities we can make activities that everyone does regularly easier.
@@ -49,6 +49,6 @@ An API which has weather information based on longitude and latitude. Input your
 *Expand on styling.
 *Add another API to add to the nutrition page which counts the calories per the ingredients for shown recipes.
 
-## Questions
+# Questions
 Hi, Thanks for checking out our Project: noted! If you have any questions about our project, please E-mail us [HERE!](mailto:ucdnotedproject@gmail.com)
 
