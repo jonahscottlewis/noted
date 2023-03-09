@@ -3,13 +3,13 @@
 ![License](https://img.shields.io/static/v1?label=License&message=MIT&color=GREEN)
 
 # Table of Contents
-* [User Story](#user)
-* [Elevator Pitch](#elevator)
+* [User Story](#user-story)
+* [Elevator Pitch](#elevator-pitch)
 * [Description](#description)
-* [Github Link](#github)
-* [Motivation for Development](#motivation)
-* [Technologies Used](#technologies)
-* [Future Development](#hopes)
+* [Github Link](#github-link)
+* [Motivation for Development](#motivation-for-development)
+* [Technologies Used](#technologies-used)
+* [Future Development](#future-development)
 * [Questions](#questions)
 
 # User Story
@@ -37,17 +37,17 @@ Noted is an application designed to help you keep track of your daily life. It c
 Other than fulfilling the assignment requirements and displaying our coding capabilities the motivation to develop the Noted app is to create an application to help organize your daily life. Using the APIs abilities we can make activities that everyone does regularly easier.
 
 # Technologies Used
-Spoonacular food API:
-An API with a catalog of recipes. Input a keyword and the titles of recipes as well as links to the website with the ingredients and cooking instructions will appear on the page.
-Open Weather API:
-An API which has weather information based on longitude and latitude. Input your area code and the screen will display the current temperature, min-max-temperature, humidity and wind speed in the designated area.
+1. **Spoonacular food API:**
+* An API with a catalog of recipes. Input a keyword and the titles of recipes as well as links to the website with the ingredients and cooking instructions will appear on the page.
+2. **Open Weather API:**
+* An API which has weather information based on longitude and latitude. Input your area code and the screen will display the current temperature, min-max-temperature, humidity and wind speed in the designated area.
 
-# Hopes for Future Development
-*Add a Sign-in Page and Journaling Page for more in depth notes.
-*Finishing development on Calendar and Lists pages.
-*Add more media query breaks to make mobile friendly.
-*Expand on styling.
-*Add another API to add to the nutrition page which counts the calories per the ingredients for shown recipes.
+# Future Development
+* Add a Sign-in Page and Journaling Page for more in depth notes.
+* Finishing development on Calendar and Lists pages.
+* Add more media query breaks to make mobile friendly.
+* Expand on styling.
+* Add another API to add to the nutrition page which counts the calories per the ingredients for shown recipes.
 
 # Questions
 Hi, Thanks for checking out our Project: noted! If you have any questions about our project, please E-mail us [HERE!](mailto:ucdnotedproject@gmail.com)
